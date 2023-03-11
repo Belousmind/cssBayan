@@ -1,25 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
+html {
+    font-size: 16px;
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 
-}
-
-.accordion { 
-    display: block;
-    background-color: beige;
-    width: 680px;
-    margin: 120px auto;
-}
-
-details {
-    margin-bottom: 20px;
-}
-
-html {
-    font-size: 16px;
 }
 
 h1 {
@@ -31,6 +20,24 @@ div,
 summary {
     font-family: 'PT Mono', monospace;
     color: #2E65F1;
+}
+
+.accordion { 
+    display: block;
+    width: 70%;
+    margin: 50px auto;
+    padding: 1rem 2rem;
+}
+
+details {
+    margin-bottom: 20px;
+    background-color: rgb(238, 245, 253);
+    border-radius: 5px;
+}
+
+summary {
+    padding: .5rem 1rem;
+    font-size: 1rem;
 }
 
 .meme-img {
@@ -45,3 +52,9 @@ img {
     width: 50%;
     height: auto;
 }
+
+summary {
+    outline: none;
+    /* Hides marker on Chrome */
+    list-style: none;
+  }
