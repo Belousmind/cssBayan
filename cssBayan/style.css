@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+html {
+    font-size: 16px;
+}
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+.accordion div{
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(238, 245, 253);
+    border-radius: .4rem;
+}
+.accordion > div {
+    margin-bottom: 20px;
+}
+input {
+    display: none;
+}
+h1 {
+    font-size: 3rem;
+}
+h1,
+div{
+    font-family: 'PT Mono', monospace;
+    color: #2E65F1;
+}
+svg {
+    display: none;
+}
+.summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.meme-img {
+    display: none;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 0;
+}
+input:checked ~ .meme-img{
+    cursor: pointer;
+    display: block;
+    animation: ani 1s forwards;  
+}
+
+
+input:checked ~ label {
+    color: rgb(185, 181, 181);
+}
+
+@keyframes ani {
+    0% {transform: translateY(-150%);}
+    100% {transform: translateY(0);}
+}
+
+@media (min-width: 960px) {
+    .accordion:hover svg{
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        fill: #2E65F1;
+        transition: 200ms linear;
+    }
+        input:hover ~ .meme-img,
+        .meme-img:hover{
+        cursor: pointer;
+        display: block;
+        animation: ani 1s forwards;
+    }
+    .accordion:hover label {
+        color: rgb(185, 181, 181);
+    }
+    .accordion div:hover svg {
+        transform: rotate(45deg);
+        fill: rgb(185, 181, 181);
+    }
+    
+}
+
+@media (max-width: 820px) {
+    h1 {
+        font-size: 2rem;
+    }
+    div {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2rem;
+    }
+    div {
+        font-size: .5rem;
+    }
+}
